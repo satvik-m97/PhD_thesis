@@ -1,5 +1,13 @@
 name: Actions on Satvik's work
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
 jobs:
   test-docker-image:
     runs-on: ubuntu-latest
