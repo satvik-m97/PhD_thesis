@@ -13,15 +13,3 @@ jobs:
         run: |
           cd tests/satvik
           pytest
-
-  docker-availability:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check docker availability
-        run: docker --version
-      - name: Login to Docker Hub
-        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u satvik97 --password-stdin
-      - name: Run the Test Job
-        run: |
-          docker run --rm -v $PWD:/repo -w /repo satvik97/satvik-mishra /bin/bash -c "cd tests/satvik && pytest"
-
