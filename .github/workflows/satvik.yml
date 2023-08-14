@@ -8,9 +8,11 @@ jobs:
      - name: Check out repository
        uses: actions/checkout@v3
      - name: Login to dockerhub
-       env:
-          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-       run: echo "${DOCKERHUB_TOKEN}" | docker login -u satvik97 --password-stdin
+       uses: docker/login-action@v1
+       with:
+          username: satvik97
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+       
      - name: Check that we have vim installed
        run: test -f /bin/vim && echo "Vim is installed"
      - name: Run tests in tests/satvik directory
