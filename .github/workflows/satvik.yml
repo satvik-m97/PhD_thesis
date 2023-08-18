@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Check that we have vim installed
-        run: test -f /bin/vim && echo "Vim is installed"
       - name: Run tests in tests/satvik directory
         run: |
           cd tests/satvik
