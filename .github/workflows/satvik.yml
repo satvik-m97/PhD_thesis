@@ -18,5 +18,4 @@ jobs:
 
       - name: Run tests in Python_scripts directory
         run: |
-          cd Python_scripts
-          python testing_script.py
+          python Python_scripts/testing_script.py
