@@ -221,7 +221,7 @@ plt.grid(linestyle = "dashed")
 plt.ylabel('$P(k) [h^{-1}MpC]^3$')
 plt.xlabel('$k [h~MpC^{-1}]$')
 
-plt.errorbar(kspace[1:l], pk_mean[1:], yerr=pk_std[1:], fmt='--^', label='Data', linewidth=0.5,markersize=2.0)
+plt.errorbar(kspace[1:], pk_mean[1:], yerr=pk_std[1:], fmt='--^', label='Data', linewidth=0.5,markersize=2.0)
 plt.title("using whitenosie in 3d")
 plt.xscale('log')
 plt.yscale('log')
