@@ -15,7 +15,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Run tests in tests/satvik directory
+
+      - name: Run tests in Python_scripts directory
         run: |
           cd Python_scripts
           python testing_script.py
