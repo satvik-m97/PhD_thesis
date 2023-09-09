@@ -14,7 +14,7 @@ from scipy.interpolate import interp1d
 
 
 # mpk = np.genfromtxt(r'C:/Users/satvi/PhD_thesis/kk.dat')
-mpk = np.genfromtxt(r'C:/Users/satvi/PhD_thesis/kk.dat')
+mpk = np.genfromtxt(r'kk.dat')
 
 
 # In[227]:
