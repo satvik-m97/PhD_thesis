@@ -14,8 +14,8 @@ from scipy.interpolate import interp1d
 
 
 # mpk = np.genfromtxt(r'C:/Users/satvi/PhD_thesis/kk.dat')
-#mpk = np.genfromtxt(r'C:/Users/satvi/PhD_thesis/kk.dat')
-mpk = np.genfromtxt(r'kk.dat')
+mpk = np.genfromtxt(r'C:/Users/satvi/PhD_thesis/kk.dat')
+
 
 # In[227]:
 
@@ -148,6 +148,7 @@ def distance1(length,cx,cy):
     return x_val_fft, kxx,kyy, dist
 
 
+
 # In[233]:
 
 
@@ -220,7 +221,7 @@ plt.grid(linestyle = "dashed")
 plt.ylabel('$P(k) [h^{-1}MpC]^3$')
 plt.xlabel('$k [h~MpC^{-1}]$')
 
-plt.errorbar(kspace[1:], pk_mean[1:], yerr=pk_std[1:], fmt='--^', label='Data', linewidth=0.5,markersize=2.0)
+plt.errorbar(kspace[1:l], pk_mean[1:], yerr=pk_std[1:], fmt='--^', label='Data', linewidth=0.5,markersize=2.0)
 plt.title("using whitenosie in 3d")
 plt.xscale('log')
 plt.yscale('log')
@@ -277,6 +278,7 @@ def distance3d(length,cx,cy,cz):
                 dist[i,j,k] = np.sqrt((xx[i,j,k])**2 + (yy[i,j,k])**2 + zz[i,j,k]**2)
     #dist = dist + 2*np.pi # to avoid division by zero
     return x_val_fft, kxx,kyy, kzz, dist
+
 
 
 # In[240]:
