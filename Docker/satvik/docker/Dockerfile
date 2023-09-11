@@ -11,8 +11,8 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_6
 
 ENV PATH=$CONDA_DIR/bin:$PATH
 
-RUN conda install -y -c conda-forge pyomo && \
-	conda install -y -c conda-forge glpk && \
+RUN conda install -y -c conda-forge numpy && \
+    conda install -y -c conda-forge scipy && \
 	conda install pandas
     
     
